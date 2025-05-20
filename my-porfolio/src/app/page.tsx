@@ -125,21 +125,21 @@ export default function MainPage() {
               technologies and collaborating on exciting projects.
             </p>
             <div className="mb-4">
-              <h3 className="text-[#08a045] font-bold mb-1">
+              <h3 className="text-[#08a045] font-medium mb-1">
                 Programming Languages:
               </h3>
               <ul className="flex flex-wrap gap-2 text-sm mb-2">
                 {["JavaScript", "TypeScript", "HTML", "CSS"].map((lang) => (
                   <li
                     key={lang}
-                    className="bg-[#e6f4ea] text-[#08a045] px-3 py-1 rounded flex items-center"
+                    className="bg-[#e6f4ea] text-[#171717] px-3 py-1 rounded flex items-center"
                   >
                     {languageIcons[lang]}
                     {lang}
                   </li>
                 ))}
               </ul>
-              <h3 className="text-[#08a045] font-bold mt-3 mb-1">
+              <h3 className="text-[#08a045] font-medium mt-3 mb-1">
                 Frameworks & Libraries:
               </h3>
               <ul className="flex flex-wrap gap-2 text-sm mb-2">
@@ -147,7 +147,7 @@ export default function MainPage() {
                   (fw) => (
                     <li
                       key={fw}
-                      className="bg-[#e6f4ea] text-[#08a045] px-3 py-1 rounded flex items-center"
+                      className="bg-[#e6f4ea] text-[#171717]  px-3 py-1 rounded flex items-center"
                     >
                       {frameworkIcons[fw]}
                       {fw}
@@ -155,14 +155,14 @@ export default function MainPage() {
                   )
                 )}
               </ul>
-              <h3 className="text-[#08a045] font-bold mt-3 mb-1">
+              <h3 className="text-[#08a045] font-medium mt-3 mb-1">
                 Other Tools & Databases:
               </h3>
               <ul className="flex flex-wrap gap-2 text-sm">
                 {["Git", "Figma", "MongoDB", "MySQL"].map((tool) => (
                   <li
                     key={tool}
-                    className="bg-[#e6f4ea] text-[#08a045] px-3 py-1 rounded flex items-center"
+                    className="bg-[#e6f4ea] text-[#171717]  px-3 py-1 rounded flex items-center"
                   >
                     {toolIcons[tool]}
                     {tool}
