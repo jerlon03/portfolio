@@ -18,6 +18,8 @@ import {
   SiMysql,
 } from "react-icons/si";
 import ProjectCard from "@/components/ProjectCard";
+import MotionSection from "@/components/MotionSection";
+
 
 export default function MainPage() {
   const languageIcons: { [key: string]: JSX.Element } = {
@@ -91,16 +93,20 @@ export default function MainPage() {
         </div>
       </section>
       {/* about */}
-      <section
+      <MotionSection
         id="about"
-        className="mt-6 p-6 bg-white rounded-lg shadow-lg animate-fadeInUp "
+        className="mt-6 p-6 bg-white rounded-lg shadow-lg"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full">
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#08a045] mb-6 text-center ">
               ABOUT
             </h2>
-             <p className="text-[#0b6e4f] text-center mb-6">
+            <p className="text-[#0b6e4f] text-center mb-6">
               Learn more about my background, skills, and what drives my passion for web development.
             </p>
             <p className="text-[#171717] text-lg leading-relaxed mb-4">
@@ -176,13 +182,20 @@ export default function MainPage() {
             </div>
           </div>
         </div>
-      </section>
+      </MotionSection>
       {/* projects */}
-      <section id="projects" className="mt-10 mb-10 px-2 md:px-0">
+      <MotionSection
+        id="projects"
+        className="mt-10 mb-10 px-2 md:px-0"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+      >
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#08a045] mb-6 text-center ">
           PROJECTS
         </h2>
-         <p className="text-[#0b6e4f] text-center mb-6">
+        <p className="text-[#0b6e4f] text-center mb-6">
           Here are some of the projects I’ve worked on, showcasing my skills in full-stack and modern web development.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -190,13 +203,20 @@ export default function MainPage() {
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
-      </section>
+      </MotionSection>
       {/* contact */}
-      <section id="contact" className="mt-10 mb-10 px-2 md:px-0">
+      <MotionSection
+        id="contact"
+        className="mt-10 mb-10 px-2 md:px-0"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      >
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#08a045] mb-6 text-center">
           CONTACT US
         </h2>
-          <p className="text-[#0b6e4f] text-center mb-6">
+        <p className="text-[#0b6e4f] text-center mb-6">
           Interested in working together or have any questions? Feel free to reach out using the form below or email me directly.
         </p>
         <div className="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-6">
@@ -235,7 +255,7 @@ export default function MainPage() {
             </button>
           </form>
           <div className="mt-6 text-center text-[#08a045]">
-            Or email me directly at 
+            Or email me directly at
             <a
               href="mailto:jerlonabayon16@gmail.com"
               className="underline hover:text-[#0b6e4f]"
@@ -244,7 +264,7 @@ export default function MainPage() {
             </a>
           </div>
         </div>
-      </section>
+      </MotionSection>
     </div>
   );
 }
