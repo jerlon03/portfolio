@@ -61,7 +61,7 @@ export default function MainPage() {
   ];
 
   return (
-    <div>
+    <div className="font-Poppins">
       {/* Banner */}
       <section className="w-full bg-gradient-to-r from-[#08a045] via-[#0b6e4f] to-[#171717] py-10 md:py-16 mb-8 shadow-lg">
         <div className="px-4 md:px-6 flex flex-col md:flex-row justify-center items-center text-center md:text-left gap-6 md:gap-8">
@@ -235,7 +235,7 @@ export default function MainPage() {
             </button>
           </form>
           <div className="mt-6 text-center text-[#08a045]">
-            Or email me directly at
+            Or email me directly at 
             <a
               href="mailto:jerlonabayon16@gmail.com"
               className="underline hover:text-[#0b6e4f]"
