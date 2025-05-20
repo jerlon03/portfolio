@@ -7,7 +7,7 @@ const navItems = [
   { name: "HOME", path: "/" },
   { name: "ABOUT", path: "#about" },
   { name: "PROJECT", path: "#projects" },
-  { name: "CONTACTS", path: "/contacts" },
+  { name: "CONTACTS", path: "#contacts" },
 ];
 
 const Header = () => {
@@ -31,9 +31,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.path}
-              className={`text-white hover:text-[#08a045] transition-colors duration-200 ${
-                pathname === item.path ? "border-b-2 border-[#08a045] text-[#08a045]" : ""
-              }`}
+              className={`text-white hover:text-[#08a045] transition-colors duration-200 `}
             >
               {item.name}
             </Link>
